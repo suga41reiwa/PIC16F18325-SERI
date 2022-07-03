@@ -6,9 +6,9 @@
             <name>PIC16F18325-SERIO2</name>
             <creation-uuid>713a0db8-e1ed-4cb2-8f02-dbe570181c89</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

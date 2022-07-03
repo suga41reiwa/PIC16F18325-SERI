@@ -4115,5 +4115,50 @@
          <value>OFF</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.TreeMap"/>
+   <generatedFileHashHistoryMap class="java.util.HashMap">
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>6801fb854c649c0a08664409544bae59d966484ffda670ee4645746cad4d3f43</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.h</file>
+         <hash>47bc699da12e31095d72d27d6fa87b09efa4324e1c3d84a2f9b65ec067c15200</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\eusart.h</file>
+         <hash>0a92b30d0f9eae01cafcc354801be6d715b01670b60e20309bbea77713b55284</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adc.c</file>
+         <hash>5626865e76b8a88ed41554eee50f8f4e9cde97a7edc6d99b3c9299e5a1041b2b</hash>
+      </entry>
+      <entry>
+         <file>main.c</file>
+         <hash>2cbff4899b18a093d01bda2989793a71b910a9807db4ab93bbab1414be61b6c9</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.c</file>
+         <hash>c79a8c4d69671ed0c4d44f33c22d25f2894c0c39d265a48570d8f47c7a28ee18</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>aad82433359d9c85a519d8fb3ee2487ebb0c72b1275821810bb4ac994e184f90</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adc.h</file>
+         <hash>11971c0f21f122f0b8472906388eb6fd697bc6714ed583fa04bae81317da233c</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>dc77c8034f84b48371b183e9e45fd1bb1b439034f2d0c91b0f2434b10a447470</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\eusart.c</file>
+         <hash>647b4b691be2efbbb106f50ca8e9c379a67e8427815afd4f7a7a84bc4c8762cb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>5059d8a6df19b3f58a92361ecc2c5182162ea583735ab69a765b622f432d9aa3</hash>
+      </entry>
+   </generatedFileHashHistoryMap>
 </config>
