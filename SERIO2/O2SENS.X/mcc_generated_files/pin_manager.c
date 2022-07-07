@@ -105,7 +105,6 @@ void PIN_MANAGER_Initialize(void)
 	
     RXPPS = 0x15;   //RC5->EUSART:RX;    
     RC4PPS = 0x14;   //RC4->EUSART:TX;    
-    T0CKIPPS = 0x02;   //RA2->TMR0:T0CKI;    
 }
   
 void PIN_MANAGER_IOC(void)

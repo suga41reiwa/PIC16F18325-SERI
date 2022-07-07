@@ -10650,7 +10650,7 @@ void ADC_Initialize(void)
 
 
 
-    ADCON1 = 0x00;
+    ADCON1 = 0x80;
 
 
     ADACT = 0x00;

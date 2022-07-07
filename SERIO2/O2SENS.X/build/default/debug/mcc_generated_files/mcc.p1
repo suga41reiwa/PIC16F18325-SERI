@@ -1,22 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"110 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 110: void PMD_Initialize(void);
+"109 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 109: void PMD_Initialize(void);
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
 "242 mcc_generated_files/pin_manager.h
 [; ;mcc_generated_files/pin_manager.h: 242: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"86 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 86: void OSCILLATOR_Initialize(void);
+"85 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 85: void OSCILLATOR_Initialize(void);
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"98
-[; ;mcc_generated_files/mcc.h: 98: void WDT_Initialize(void);
+"97
+[; ;mcc_generated_files/mcc.h: 97: void WDT_Initialize(void);
 [v _WDT_Initialize `(v ~T0 @X0 0 ef ]
+"93 mcc_generated_files/fvr.h
+[; ;mcc_generated_files/fvr.h: 93:  void FVR_Initialize(void);
+[v _FVR_Initialize `(v ~T0 @X0 0 ef ]
 "137 mcc_generated_files/adc.h
 [; ;mcc_generated_files/adc.h: 137: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"106 mcc_generated_files/tmr0.h
-[; ;mcc_generated_files/tmr0.h: 106: void TMR0_Initialize(void);
-[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
 "110 mcc_generated_files/eusart.h
 [; ;mcc_generated_files/eusart.h: 110: void EUSART_Initialize(void);
 [v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
@@ -1085,11 +1085,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 56:     WDT_Initialize();
 [e ( _WDT_Initialize ..  ]
 "57
-[; ;mcc_generated_files/mcc.c: 57:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 57:     FVR_Initialize();
+[e ( _FVR_Initialize ..  ]
 "58
-[; ;mcc_generated_files/mcc.c: 58:     TMR0_Initialize();
-[e ( _TMR0_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 58:     ADC_Initialize();
+[e ( _ADC_Initialize ..  ]
 "59
 [; ;mcc_generated_files/mcc.c: 59:     EUSART_Initialize();
 [e ( _EUSART_Initialize ..  ]

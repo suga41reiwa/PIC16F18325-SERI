@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>O2SENS</name>
+            <name>CO2SENS</name>
             <creation-uuid>1dc0d885-eebb-430f-a0ed-6498c53b0094</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>

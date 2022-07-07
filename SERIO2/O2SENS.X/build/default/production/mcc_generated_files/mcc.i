@@ -10638,7 +10638,11 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 1 "mcc_generated_files/fvr.h" 1
+# 93 "mcc_generated_files/fvr.h"
+ void FVR_Initialize(void);
+# 127 "mcc_generated_files/fvr.h"
+_Bool FVR_IsOutputReady(void);
 # 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
@@ -10678,31 +10682,6 @@ adc_result_t ADC_GetConversion(adc_channel_t channel);
 void ADC_TemperatureAcquisitionDelay(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/tmr0.h" 1
-# 106 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 135 "mcc_generated_files/tmr0.h"
-void TMR0_StartTimer(void);
-# 167 "mcc_generated_files/tmr0.h"
-void TMR0_StopTimer(void);
-# 203 "mcc_generated_files/tmr0.h"
-uint16_t TMR0_ReadTimer(void);
-# 242 "mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint16_t timerVal);
-# 278 "mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 296 "mcc_generated_files/tmr0.h"
-void TMR0_ISR(void);
-# 314 "mcc_generated_files/tmr0.h"
-void TMR0_CallBack(void);
-# 332 "mcc_generated_files/tmr0.h"
- void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 350 "mcc_generated_files/tmr0.h"
-extern void (*TMR0_InterruptHandler)(void);
-# 368 "mcc_generated_files/tmr0.h"
-void TMR0_DefaultInterruptHandler(void);
-# 57 "mcc_generated_files/mcc.h" 2
-
 # 1 "mcc_generated_files/eusart.h" 1
 # 75 "mcc_generated_files/eusart.h"
 typedef union {
@@ -10734,14 +10713,14 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 58 "mcc_generated_files/mcc.h" 2
-# 73 "mcc_generated_files/mcc.h"
+# 57 "mcc_generated_files/mcc.h" 2
+# 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "mcc_generated_files/mcc.h"
+# 85 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "mcc_generated_files/mcc.h"
+# 97 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 110 "mcc_generated_files/mcc.h"
+# 109 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -10754,8 +10733,8 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    FVR_Initialize();
     ADC_Initialize();
-    TMR0_Initialize();
     EUSART_Initialize();
 }
 

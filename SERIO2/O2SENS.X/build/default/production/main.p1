@@ -1,19 +1,37 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"50 main.c
+[; ;main.c: 50: typedef struct{
+[s S928 `us 1 `us 1 `us -> 100 `i `f 1 `f 1 ]
+[n S928 . co2val fvr20 fvrdebug fco2v co2ppm ]
 [p mainexit ]
-"73 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 73: void SYSTEM_Initialize(void);
+"72 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"358 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h: 358:     struct {
-[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . INTEDG . PEIE GIE ]
-"357
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h: 357: typedef union {
-[u S30 `S31 1 ]
-[n S30 . . ]
-"365
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h: 365: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"91 main.c
+[; ;main.c: 91:     INTERRUPT_GlobalInterruptEnable();
+[v _INTERRUPT_GlobalInterruptEnable `(i ~T0 @X0 0 e? ]
+"94
+[; ;main.c: 94:     INTERRUPT_PeripheralInterruptEnable();
+[v _INTERRUPT_PeripheralInterruptEnable `(i ~T0 @X0 0 e? ]
+"111
+[; ;main.c: 111:         ADC_SelectChannel(0b000010); _delay((unsigned long)((20)*(4000000/4000000.0)));
+[c E6344 2 60 61 62 63 .. ]
+[n E6344 . channel_ANA2 channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
+"167 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 167: void ADC_SelectChannel(adc_channel_t channel);
+[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E6344 ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
+"289 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 289: adc_result_t ADC_GetConversion(adc_channel_t channel);
+[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E6344 ]
+"113 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"341 ./mcc_generated_files/eusart.h
+[; ;./mcc_generated_files/eusart.h: 341: void EUSART_Write(uint8_t txData);
+[v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
 "55 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1022,37 +1040,234 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18779
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f18325.h: 18779: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+"59 main.c
+[; ;main.c: 59: T_SYSTEM tSys;
+[v _tSys `S928 ~T0 @X0 1 e ]
+"61
+[; ;main.c: 61: const uint16_t co2_table[]={
+[v _co2_table `Cus ~T0 @X0 -> 103 `i e ]
+[i _co2_table
+:U ..
+-> -> 400 `i `us
+-> -> 411 `i `us
+-> -> 422 `i `us
+-> -> 434 `i `us
+-> -> 445 `i `us
+-> -> 457 `i `us
+-> -> 470 `i `us
+-> -> 483 `i `us
+-> -> 496 `i `us
+-> -> 509 `i `us
+-> -> 523 `i `us
+-> -> 537 `i `us
+-> -> 552 `i `us
+-> -> 567 `i `us
+-> -> 582 `i `us
+-> -> 598 `i `us
+-> -> 614 `i `us
+-> -> 631 `i `us
+-> -> 648 `i `us
+-> -> 666 `i `us
+-> -> 684 `i `us
+-> -> 703 `i `us
+-> -> 722 `i `us
+-> -> 741 `i `us
+-> -> 761 `i `us
+-> -> 782 `i `us
+-> -> 803 `i `us
+-> -> 825 `i `us
+-> -> 848 `i `us
+-> -> 871 `i `us
+-> -> 894 `i `us
+-> -> 919 `i `us
+-> -> 944 `i `us
+-> -> 969 `i `us
+-> -> 996 `i `us
+-> -> 1023 `i `us
+-> -> 1051 `i `us
+-> -> 1079 `i `us
+-> -> 1109 `i `us
+-> -> 1139 `i `us
+-> -> 1170 `i `us
+-> -> 1201 `i `us
+-> -> 1234 `i `us
+-> -> 1268 `i `us
+-> -> 1302 `i `us
+-> -> 1338 `i `us
+-> -> 1374 `i `us
+-> -> 1411 `i `us
+-> -> 1450 `i `us
+-> -> 1489 `i `us
+-> -> 1530 `i `us
+-> -> 1571 `i `us
+-> -> 1614 `i `us
+-> -> 1658 `i `us
+-> -> 1703 `i `us
+-> -> 1749 `i `us
+-> -> 1797 `i `us
+-> -> 1845 `i `us
+-> -> 1896 `i `us
+-> -> 1947 `i `us
+-> -> 2000 `i `us
+-> -> 2055 `i `us
+-> -> 2110 `i `us
+-> -> 2168 `i `us
+-> -> 2227 `i `us
+-> -> 2287 `i `us
+-> -> 2349 `i `us
+-> -> 2413 `i `us
+-> -> 2479 `i `us
+-> -> 2546 `i `us
+-> -> 2616 `i `us
+-> -> 2687 `i `us
+-> -> 2760 `i `us
+-> -> 2835 `i `us
+-> -> 2912 `i `us
+-> -> 2991 `i `us
+-> -> 3072 `i `us
+-> -> 3156 `i `us
+-> -> 3242 `i `us
+-> -> 3330 `i `us
+-> -> 3420 `i `us
+-> -> 3513 `i `us
+-> -> 3609 `i `us
+-> -> 3707 `i `us
+-> -> 3808 `i `us
+-> -> 3911 `i `us
+-> -> 4018 `i `us
+-> -> 4127 `i `us
+-> -> 4239 `i `us
+-> -> 4354 `i `us
+-> -> 4473 `i `us
+-> -> 4594 `i `us
+-> -> 4719 `i `us
+-> -> 4847 `i `us
+-> -> 4979 `i `us
+-> -> 5115 `i `us
+-> -> 5254 `i `us
+-> -> 5396 `i `us
+-> -> 5543 `i `us
+-> -> 5694 `i `us
+-> -> 5849 `i `us
+-> -> 6008 `i `us
+-> -> 6171 `i `us
+..
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: void main(void)
+"82
+[; ;main.c: 82: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
+"83
+[; ;main.c: 83: {
 {
 [e :U _main ]
 [f ]
-"52
-[; ;main.c: 52:     SYSTEM_Initialize();
+"85
+[; ;main.c: 85:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"58
-[; ;main.c: 58:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"61
-[; ;main.c: 61:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"69
-[; ;main.c: 69:     while (1)
-[e :U 928 ]
-"70
-[; ;main.c: 70:     {
+"91
+[; ;main.c: 91:     INTERRUPT_GlobalInterruptEnable();
+[e ( _INTERRUPT_GlobalInterruptEnable ..  ]
+"94
+[; ;main.c: 94:     INTERRUPT_PeripheralInterruptEnable();
+[e ( _INTERRUPT_PeripheralInterruptEnable ..  ]
+"103
+[; ;main.c: 103:     while (1)
+[e :U 931 ]
+"104
+[; ;main.c: 104:     {
 {
-"72
-[; ;main.c: 72:     }
+"105
+[; ;main.c: 105:         char s[20];
+[v _s `uc ~T0 @X0 -> 20 `i a ]
+"106
+[; ;main.c: 106:         char *p;
+[v _p `*uc ~T0 @X0 1 a ]
+"107
+[; ;main.c: 107:         float fco2,fvr20;
+[v _fco2 `f ~T0 @X0 1 a ]
+[v _fvr20 `f ~T0 @X0 1 a ]
+"108
+[; ;main.c: 108:         float e;
+[v _e `f ~T0 @X0 1 a ]
+"109
+[; ;main.c: 109:         int n;
+[v _n `i ~T0 @X0 1 a ]
+"111
+[; ;main.c: 111:         ADC_SelectChannel(0b000010); _delay((unsigned long)((20)*(4000000/4000000.0)));
+[e ( _ADC_SelectChannel (1 -> -> 2 `i `E6344 ]
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"112
+[; ;main.c: 112:         tSys.co2val = ADC_GetConversion(0b000010);
+[e = . _tSys 0 ( _ADC_GetConversion (1 -> -> 2 `i `E6344 ]
+"114
+[; ;main.c: 114:         ADC_SelectChannel(0b111111); _delay((unsigned long)((20)*(4000000/4000000.0)));
+[e ( _ADC_SelectChannel (1 -> -> 63 `i `E6344 ]
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"115
+[; ;main.c: 115:         tSys.fvr20 = ADC_GetConversion(0b111111);
+[e = . _tSys 1 ( _ADC_GetConversion (1 -> -> 63 `i `E6344 ]
+"116
+[; ;main.c: 116:         fvr20 = tSys.fvr20;
+[e = _fvr20 -> . _tSys 1 `f ]
+"117
+[; ;main.c: 117:         fco2 = tSys.co2val;
+[e = _fco2 -> . _tSys 0 `f ]
+"118
+[; ;main.c: 118:         tSys.fco2v = fco2 * (2.048/fvr20);
+[e = . _tSys 3 -> * -> _fco2 `d / .2.048 -> _fvr20 `d `f ]
+"120
+[; ;main.c: 120:         n = (3.23-tSys.fco2v)/(5E-3);
+[e = _n -> / - .3.23 -> . _tSys 3 `d .5e-3 `i ]
+"121
+[; ;main.c: 121:         if(n<0) n= 0;
+[e $ ! < _n -> 0 `i 933  ]
+[e = _n -> 0 `i ]
+[e $U 934  ]
+"122
+[; ;main.c: 122:         else if( n>= (sizeof(co2_table)/2))n=sizeof(co2_table)/2-1;
+[e :U 933 ]
+[e $ ! >= -> _n `ui / -> # _co2_table `ui -> -> 2 `i `ui 935  ]
+[e = _n -> - / -> # _co2_table `ui -> -> 2 `i `ui -> -> 1 `i `ui `i ]
+[e :U 935 ]
+[e :U 934 ]
+"123
+[; ;main.c: 123:         sprintf(s,"%d,%4.2fV\r\n",co2_table[n],tSys.fco2v);
+[e ( _sprintf (1 , , (. , &U _s :s 1C -> *U + &U _co2_table * -> -> _n `ui `ux -> -> # *U &U _co2_table `ui `ux `ui -> . _tSys 3 `d ]
+"124
+[; ;main.c: 124:         p = s;
+[e = _p &U _s ]
+"125
+[; ;main.c: 125:         while(*p){
+[e $U 936  ]
+[e :U 937 ]
+{
+"126
+[; ;main.c: 126:             EUSART_Write(*p);
+[e ( _EUSART_Write (1 -> *U _p `uc ]
+"127
+[; ;main.c: 127:             p++;
+[e ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x ]
+"128
+[; ;main.c: 128:         }
 }
-[e :U 927 ]
-[e $U 928  ]
-[e :U 929 ]
-"73
-[; ;main.c: 73: }
-[e :UE 926 ]
+[e :U 936 ]
+"125
+[; ;main.c: 125:         while(*p){
+[e $ != -> *U _p `i -> 0 `i 937  ]
+[e :U 938 ]
+"129
+[; ;main.c: 129:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"133
+[; ;main.c: 133:     }
 }
+[e :U 930 ]
+[e $U 931  ]
+[e :U 932 ]
+"134
+[; ;main.c: 134: }
+[e :UE 929 ]
+}
+[p f _sprintf 8495232 ]
+[a 1C 37 100 44 37 52 46 50 102 86 13 10 0 ]
