@@ -14,23 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L samac_2:PIC16F18325-I_P IC1
-U 1 1 62B6BDE8
-P 3475 3175
-F 0 "IC1" H 4425 3440 50  0000 C CNN
-F 1 "PIC16F18325-I_P" H 4425 3349 50  0000 C CNN
-F 2 "DIP781W56P254L1918H533Q14N" H 5225 3275 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/1772601" H 5225 3175 50  0001 L CNN
-F 4 "8-bit Microcontrollers - MCU 8-Bit MCU 14KB Flash 1KB RAM, 256B EE" H 5225 3075 50  0001 L CNN "Description"
-F 5 "5.334" H 5225 2975 50  0001 L CNN "Height"
-F 6 "1772601" H 5225 2875 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/1772601" H 5225 2775 50  0001 L CNN "RS Price/Stock"
-F 8 "Microchip" H 5225 2675 50  0001 L CNN "Manufacturer_Name"
-F 9 "PIC16F18325-I/P" H 5225 2575 50  0001 L CNN "Manufacturer_Part_Number"
-	1    3475 3175
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x06 J2
 U 1 1 62B6C87B
 P 6325 1875
@@ -307,4 +290,21 @@ Wire Notes Line
 	1750 4525 2775 4525
 Wire Notes Line
 	2775 4525 2775 4500
+$Comp
+L samac_2:PIC16F18326-I_P IC1
+U 1 1 62C9C962
+P 3475 3175
+F 0 "IC1" H 4425 3440 50  0000 C CNN
+F 1 "PIC16F18326-I_P" H 4425 3349 50  0000 C CNN
+F 2 "DIP781W56P254L1918H533Q14N" H 5225 3275 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/1241554P" H 5225 3175 50  0001 L CNN
+F 4 "MCU,PIC16F18326,28KB Flash,XLP,DIP14" H 5225 3075 50  0001 L CNN "Description"
+F 5 "5.334" H 5225 2975 50  0001 L CNN "Height"
+F 6 "1241554P" H 5225 2875 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/1241554P" H 5225 2775 50  0001 L CNN "RS Price/Stock"
+F 8 "Microchip" H 5225 2675 50  0001 L CNN "Manufacturer_Name"
+F 9 "PIC16F18326-I/P" H 5225 2575 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3475 3175
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

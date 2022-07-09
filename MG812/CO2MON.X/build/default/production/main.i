@@ -11241,7 +11241,6 @@ double yn(int, double);
 typedef struct{
     adc_result_t co2val;
     adc_result_t fvr20;
-    adc_result_t fvrdebug[100];
     float fco2v;
     float co2ppm ;
 
@@ -11282,37 +11281,51 @@ const uint16_t co2_table[]={
 
 
 
+
+
+
+
+void putstr( char * p )
+{
+        while(*p){
+            EUSART_Write(*p);
+            p++;
+        }
+}
 void main(void)
 {
-
     SYSTEM_Initialize();
-# 121 "main.c"
+
     while (1)
     {
         char s[20];
         char *p;
         float fco2,fvr20;
-        float e;
+        float ftotal,e;
         int n;
 
-        ADC_SelectChannel(0b000010); _delay((unsigned long)((20)*(1000000/4000000.0)));
-        tSys.co2val = ADC_GetConversion(0b000010);
+        ftotal = 0.0f;
+        for(int i= 0;i< 10 ;i++){
+            _delay((unsigned long)((20)*(1000000/4000000.0)));
+            tSys.co2val = ADC_GetConversion(0b000010);
 
-        ADC_SelectChannel(0b111111); _delay((unsigned long)((20)*(1000000/4000000.0)));
-        tSys.fvr20 = ADC_GetConversion(0b111111);
-        fvr20 = tSys.fvr20;
-        fco2 = tSys.co2val;
-        tSys.fco2v = fco2 * (4.048514/fvr20);
 
+
+            ADC_SelectChannel(0b000010);
+            fvr20 = tSys.fvr20;
+            fco2 = tSys.co2val;
+
+            ftotal += fco2 * (5.0f/1023);
+        }
+
+        tSys.fco2v = ftotal / 10;
         n = (3.27-tSys.fco2v)/(2.5E-3);
+
         if(n<0) n= 0;
         else if( n>= (sizeof(co2_table)/2))n=sizeof(co2_table)/2-1;
         sprintf(s,"%d,%5.3fV\r\n",co2_table[n],tSys.fco2v);
-        p = s;
-        while(*p){
-            EUSART_Write(*p);
-            p++;
-        }
+
+        putstr(s);
         _delay((unsigned long)((1000)*(1000000/4000.0)));
     }
 }

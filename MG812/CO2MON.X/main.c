@@ -56,7 +56,6 @@
 typedef struct{
     adc_result_t co2val;
     adc_result_t fvr20;
-    adc_result_t fvrdebug[100];
     float fco2v;
     float co2ppm ;
 
@@ -96,57 +95,56 @@ const uint16_t co2_table[]={
 };
 
 #define FVR_VOLT    4.048514    // 4.096
+#define AVE_NUM 10
 
+
+
+
+void putstr( char * p )
+{
+        while(*p){ 
+            EUSART_Write(*p);
+            p++;
+        }   
+}
 void main(void)
 {
-    // initialize the device
     SYSTEM_Initialize();
-
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-
     
     while (1)
     {
         char s[20];
         char *p;
         float fco2,fvr20;
-        float e;
+        float ftotal,e;
         int n;
-        // Add your application code
-        ADC_SelectChannel(ADCCH_ANA2);  __delay_us(20);
-        tSys.co2val =  ADC_GetConversion(ADCCH_ANA2);
+
+        ftotal = 0.0f;
+        for(int i= 0;i< AVE_NUM ;i++){
+            __delay_us(20);
+            tSys.co2val =  ADC_GetConversion(ADCCH_ANA2);
+/*            ADC_SelectChannel(ADCCH_FVR);   __delay_us(20);
+            tSys.fvr20 =  ADC_GetConversion(ADCCH_FVR);
+  */
+            ADC_SelectChannel(ADCCH_ANA2);  
+            fvr20 = tSys.fvr20;
+            fco2 = tSys.co2val;
+    //        ftotal += fco2 * (FVR_VOLT/fvr20);
+            ftotal += fco2 * (5.0f/1023);
+        }
         
-        ADC_SelectChannel(ADCCH_FVR);   __delay_us(20);
-        tSys.fvr20 =  ADC_GetConversion(ADCCH_FVR);
-        fvr20 = tSys.fvr20;
-        fco2 = tSys.co2val;
-        tSys.fco2v = fco2 * (FVR_VOLT/fvr20);
-        
+        tSys.fco2v = ftotal / AVE_NUM;
         n =  (3.27-tSys.fco2v)/(2.5E-3);
+        
         if(n<0) n= 0;
         else if( n>= (sizeof(co2_table)/2))n=sizeof(co2_table)/2-1;
         sprintf(s,"%d,%5.3fV\r\n",co2_table[n],tSys.fco2v);
-        p = s;
-        while(*p){ 
-            EUSART_Write(*p);
-            p++;
-        }
+//        sprintf(s,"%d\r\n",co2_table[n]);
+        putstr(s);
         __delay_ms(1000);
     }
 }
+
 
 /**
  End of File
