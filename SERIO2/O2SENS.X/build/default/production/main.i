@@ -10904,15 +10904,6 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-
-
-
-
-
-    INTERRUPT_GlobalInterruptEnable();
-
-
-    INTERRUPT_PeripheralInterruptEnable();
 # 103 "main.c"
     while (1)
     {

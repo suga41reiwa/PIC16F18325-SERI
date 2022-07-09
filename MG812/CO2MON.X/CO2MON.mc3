@@ -808,7 +808,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="FVR" name="cdafvrVoltage"/>
-         <value></value>
+         <value/>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="FVR" registerAlias="FVRCON" settingAlias="ADFVR" alias="1x"/>
@@ -4219,58 +4219,58 @@
          <value>OFF</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
-      <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>413e8912be97f6105780aa5362d10aa1aa28152c8fd294cd7bf8152a7b79be14</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\device_config.h</file>
-         <hash>e0875e8b727fc6031eeb8ea5bf086e7cf370de3196d5b2f7fab834d8962f1336</hash>
-      </entry>
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
          <file>main.c</file>
          <hash>cae02404e7663b5c1f91c2d85c2cf93fcf7e66d42e2eea3b7e6b5abe8aaf04f1</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\device_config.c</file>
-         <hash>b7f5b9a00ed9e64c46792af3d696fc9bd707d95489041d49af23448774cc0f54</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>fbb279112c67040357a6706c348a3bac135a0c6f7d7a3c592a71854eaf2b7720</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\adc.h</file>
-         <hash>c9b5349de69bae7b6cdd3c7ab2934d339d6448ba38c5267e629724b8933edaea</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\eusart.c</file>
-         <hash>ccbdee1dbffd650047c8e48fea81eca3faa7518b406fc04056bc2461fb374bbc</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.c</file>
-         <hash>2f964520b0bdbda42ededd2630f92db80bd3796c57ad6c3a999a2330d13433fc</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\eusart.h</file>
-         <hash>431cb320f426d642ef5d45c4d0acdaf57bdb738d1df17c979940497dd1120a71</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\fvr.h</file>
-         <hash>16e734886c7b5a6a8585fc5b431097b99147cce5b49a5229b57ded685aaa0439</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\adc.c</file>
          <hash>565a8a5f2e7092cc304912754d9c12ee863c612cc614a68aa7540405c9731b04</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\adc.h</file>
+         <hash>c9b5349de69bae7b6cdd3c7ab2934d339d6448ba38c5267e629724b8933edaea</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.c</file>
+         <hash>b7f5b9a00ed9e64c46792af3d696fc9bd707d95489041d49af23448774cc0f54</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.h</file>
+         <hash>e0875e8b727fc6031eeb8ea5bf086e7cf370de3196d5b2f7fab834d8962f1336</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\eusart.c</file>
+         <hash>ccbdee1dbffd650047c8e48fea81eca3faa7518b406fc04056bc2461fb374bbc</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\eusart.h</file>
+         <hash>431cb320f426d642ef5d45c4d0acdaf57bdb738d1df17c979940497dd1120a71</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\fvr.c</file>
          <hash>38a6f4a0078e19e8671e3dfbb3af2282e90226cbb4349195318bd5b0ef019d1b</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\fvr.h</file>
+         <hash>16e734886c7b5a6a8585fc5b431097b99147cce5b49a5229b57ded685aaa0439</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>78923624e462194511778469cd3b54524222c62ebe3ac2e5d10c654c43e1b4fb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>413e8912be97f6105780aa5362d10aa1aa28152c8fd294cd7bf8152a7b79be14</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>2f964520b0bdbda42ededd2630f92db80bd3796c57ad6c3a999a2330d13433fc</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>fbb279112c67040357a6706c348a3bac135a0c6f7d7a3c592a71854eaf2b7720</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

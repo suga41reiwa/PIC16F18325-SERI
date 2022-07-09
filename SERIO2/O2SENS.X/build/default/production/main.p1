@@ -7,13 +7,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "72 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"91 main.c
-[; ;main.c: 91:     INTERRUPT_GlobalInterruptEnable();
-[v _INTERRUPT_GlobalInterruptEnable `(i ~T0 @X0 0 e? ]
-"94
-[; ;main.c: 94:     INTERRUPT_PeripheralInterruptEnable();
-[v _INTERRUPT_PeripheralInterruptEnable `(i ~T0 @X0 0 e? ]
-"111
+"111 main.c
 [; ;main.c: 111:         ADC_SelectChannel(0b000010); _delay((unsigned long)((20)*(4000000/4000000.0)));
 [c E6344 2 60 61 62 63 .. ]
 [n E6344 . channel_ANA2 channel_AVSS channel_Temp channel_DAC1 channel_FVR  ]
@@ -1165,12 +1159,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "85
 [; ;main.c: 85:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"91
-[; ;main.c: 91:     INTERRUPT_GlobalInterruptEnable();
-[e ( _INTERRUPT_GlobalInterruptEnable ..  ]
-"94
-[; ;main.c: 94:     INTERRUPT_PeripheralInterruptEnable();
-[e ( _INTERRUPT_PeripheralInterruptEnable ..  ]
 "103
 [; ;main.c: 103:     while (1)
 [e :U 931 ]
